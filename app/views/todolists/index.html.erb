@@ -2,9 +2,11 @@
 <% @lists.each do | list | %>
   <p>タイトル</p>
   <!--<sapn><%= list.title %></sapn>を削除以下コードに変更-->
- <span> 
-   <%= link_to list.title, todolist_path(list.id) %
+ <span>
+   <%= link_to list.title, todolist_path(list.id) %>
  </span>
+ <p>画像</p>
+ <%= attachment_image_tag list, :fill, 100, format: 'jpeg' %>
 
 <% end %>
 
